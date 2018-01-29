@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+        <link href="CSS/font-awesome.css" rel="stylesheet">
+        <link href="CSS/user.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="nav-fix">
+                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                <div class="nav"></div>
+                <div class="nav"></div>
+                <div class="nav"></div>
+            </div>
+            <div class="profile-wrap"></div>
+            <div class="profile-content">
+                <div class="profile">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="photo">
+                            <img src="posting/<?php echo $data['foto'];?>">
+                        </div>
+                        <label for="photo"><div class="change">Change</div></label>
+                        <input value="<?php echo $data['foto'];?>" id="photo" type="file" name="photo" style="display:none;float:left;">
+                        <input class="upload" type="submit" name="upload" value="Upload">
+                    </form>
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="input-group">
+                            <div class="icon-wrap">
+                                <i class="fa fa-user icon" aria-hidden="true"></i>
+                            </div>
+                            <input class="input" type="text" name="username" value="<?php echo $data['username'];?>" required>
+                        </div>
+                        <div class="input-group">
+                            <div class="icon-wrap">
+                                <i class="fa fa-lock icon" aria-hidden="true"></i>
+                            </div>
+                            <input class="input" type="text" name="password" value="<?php echo $data['password'];?>">
+                        </div>
+                        <div class="input-group">
+                            <input class="submit" type="submit" name="update" value="Save">
+                        </div>
+                    </form>
+                    <form method="post">
+                        <div class="input-group">
+                            <input class="delete" type="submit" name="delete" value="Delete account">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="header">
+                <div class="photo">
+                            <img src="posting/<?php echo $data['foto'];?>">
+                        </div>
+                <div class="header-title">
+                    Welcome to Be a smart guy         
+                </div>
+            </div>
+        </div>
+        <script src="JS/jquery-3.1.1.min.js"></script>
+        <script src="JS/user.js"></script>
+    </body>
+</html>

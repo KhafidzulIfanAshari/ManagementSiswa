@@ -1,0 +1,9 @@
+@media screen and (max-width: 800px){
+    .select{
+        width: 100%;
+    }
+    .sub-select{
+        margin-left: 5%;
+        width: 26.6%;
+    }
+}
